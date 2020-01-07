@@ -1,5 +1,5 @@
-CREATE DATABASE lightbnb;
-\c lightbnb
+--CREATE DATABASE lightbnb;
+--\c lightbnb
 
 
 DROP TABLE IF EXISTS properties CASCADE;
@@ -14,7 +14,7 @@ CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   email VARCHAR(255) ,
-  password  VARCHAR(255)
+  password  VARCHAR(255) DEFAULT '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'
 );
 
 CREATE TABLE properties (
